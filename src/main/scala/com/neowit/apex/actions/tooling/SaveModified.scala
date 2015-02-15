@@ -383,7 +383,7 @@ class SaveModified extends DeployModified {
                 //2014-02-24T20:35:59.000Z
                 val lastModifiedStr = record.getField("LastModifiedDate").toString
                 val lastModifiedDate = ZuluTime.deserialize(lastModifiedStr)
-                val millsLocal = session.getData(session.getKeyByFile(file)).getOrElse("LastModifiedDateMills", 0).toString.toLong
+                val millsLocal = session.getData(session.getKeyByFile(file)).getOrElse("LastModifiedDate", 0).toString.toLong
 
                 file -> Map(
                     "file" -> file,
